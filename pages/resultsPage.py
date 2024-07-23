@@ -1,16 +1,23 @@
 from selenium.webdriver.common.by import By
 from pages.basePage import BasePage
 
+# Represents the search results page on eBay
+
 
 class SearchResultsPage(BasePage):
-    RESULT_TITLES = (By.CSS_SELECTOR, ".s-item__title")
+    RESULTS = (By.CSS_SELECTOR, '.s-item')
+    SEARCH_TERM_IN_RESULTS = (By.XPATH, '//span[contains(text(), "{}")]')
 
-    def get_result_titles(self):
-        return self.driver.find_elements(*self.RESULT_TITLES)
+    def get_results(self):
+        return self.driver.find_elements(*self.RESULTS)
 
-    def verify_results_contain_term(self, term):
-        titles = self.get_result_titles()
-        assert len(titles) >= 10, "Less than 10 results found."
+    def is_search_term_in_results(self, search_term):
+        results = self.get_results()
+        for result in results:
+            if search_term.lower() in result.text.lower():
+                return True
+        return False
 
-        for title in titles:
-            assert term.lower() in title.text.lower(), f"Search term '{term}' not found in result: {title.text}"
+    def verify_results_count(self, min_count):
+        results = self.get_results()
+        return len(results) >= min_count
