@@ -15,7 +15,7 @@ WebDriver-Chrome
 Automated test suite using Python, Selenium, PyTest and Page Object Model that tests the search functionality on eBay website (https://www.ebay.com/). <br/>
 
 ## How to Run?
-1. pip install selenium pytest webdriver-manager
+1. pip install selenium pytest webdriver-manager OR pip install -r requirements.txt
 2. pytest tests/testSearch.py
 
 ## Core Functionality
