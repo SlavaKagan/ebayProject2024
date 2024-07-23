@@ -5,7 +5,7 @@
 
 ## General info about the task
 **GitHub repository:** https://github.com/SlavaKagan/ebayProject2024 <br />
-**Programming Language:** Python (3.7.3) version https://www.python.org/ <br />
+**Programming Language:** Python (3.11.9) version https://www.python.org/ <br />
 **Testing Framework:** Selenium- https://www.selenium.dev/ <br />
 Package- "pytest" https://docs.pytest.org/en/8.2.x/ <br/>
 Page Object Model (POM)- A design pattern in Selenium that creates an object repository for storing all web elements. <br/>
