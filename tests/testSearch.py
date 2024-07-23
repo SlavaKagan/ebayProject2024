@@ -46,5 +46,5 @@ def test_search_functionality(driver):
     assert expected in actual, f"Expected title: {expected}, but got: {actual}"
 
     # Verifying that the search results contain the search term and find at least 10 results.
-    assert search_results_page.verify_results_count(10), "Fewer than 10 search results found"
+    assert search_results_page.verify_results_count(const.TEN_RESULTS_COUNT), "Fewer than 10 search results found"
     assert search_results_page.is_search_term_in_results(const.TERM), "Search term 'laptop' not found in results"
