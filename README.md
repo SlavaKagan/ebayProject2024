@@ -16,7 +16,7 @@ Automated test suite using Python, Selenium, PyTest and Page Object Model that t
 
 ## How to Run?
 1. pip install selenium pytest webdriver-manager OR pip install -r requirements.txt
-2. from the terminal-run command "pytest tests/testSearch.py"
+2. from the terminal-run command "pytest tests/testSuite.py"
 
 ## Core Functionality
 1. Verifying that the eBay homepage loads correctly.
